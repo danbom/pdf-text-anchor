@@ -1,0 +1,27 @@
+:root { color-scheme: light dark; --ink:#16181d; --mute:#6b7280; --line:#e5e7eb; --bg:#fafafa; --card:#fff; }
+@media (prefers-color-scheme: dark){ :root{ --ink:#e8eaed; --mute:#9aa1ab; --line:#2a2e35; --bg:#111317; --card:#181b20; } }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif;word-break:keep-all}
+main{max-width:980px;margin:0 auto;padding:40px 16px 80px}
+h1{font-size:24px;margin:0 0 6px;letter-spacing:-.02em}
+.sub{color:var(--mute);margin:0 0 28px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px;overflow-x:auto}
+.row{display:flex;gap:8px 10px;align-items:center;flex-wrap:wrap}
+button{font:inherit;padding:6px 12px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:7px;cursor:pointer}
+button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px;white-space:pre-wrap;word-break:break-all}
+.mute,.note{color:var(--mute);font-size:13px}
+.note{margin:0 0 16px}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:6px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{white-space:nowrap;font-weight:600}
+.legend{display:flex;align-items:center;gap:6px}
+.legend::before{content:"";flex:none;width:12px;height:12px;border-radius:3px;border:2px solid currentColor;background:color-mix(in srgb,currentColor 20%,transparent)}
+.legend.old{color:#dc2626}.legend.new{color:#16a34a}
+.doc{display:flex;justify-content:center;border:1px solid var(--line);border-radius:10px;overflow:auto;background:#fff;padding:12px}
+/* 형광펜은 글자 선택을 막으면 안 돼요 */
+.overlay{position:absolute;inset:0;z-index:3;pointer-events:none}
+.hl{position:absolute;mix-blend-mode:multiply}
+.hl.saved{background:rgba(250,204,21,.5)}
+.hl.old{background:rgba(220,38,38,.22);outline:2px solid rgba(220,38,38,.85)}
+.hl.new{background:rgba(22,163,74,.22);outline:2px solid rgba(22,163,74,.85)}
