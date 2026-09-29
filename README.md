@@ -3,6 +3,10 @@
 PDF 텍스트 레이어에서 드래그한 글자 범위를 저장하고, 문서가 바뀐 뒤에 다시 찾는 최소 예제예요.
 블로그 글 [「형광펜은 좌표가 아니라 글자에 칠한다」](https://danbom425.tistory.com/118)(브라우저에서 문서 다루기 #3)의 재현 저장소입니다.
 
+**▶ 라이브 데모: https://pdf-text-anchor.vercel.app**
+
+[![screenshot](docs/screenshot.png)](https://pdf-text-anchor.vercel.app)
+
 ## 결론 먼저
 
 | 저장하는 것 | 배율·회전이 바뀌면 | 문서에 한 줄이 늘면 | 뷰어가 바뀌면 (pdf.js 뷰어 ↔ react-pdf) |
